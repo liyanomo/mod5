@@ -1,6 +1,7 @@
 import json
 
 list1 = {}
+slv = {}
 with open ('l.json', 'w') as file:
     json.dump(list1,file)
     
@@ -10,7 +11,7 @@ class Model:
     text = 2
     author = 3
     
-    def _init_( self, title, text, author):
+    def __init__( self, title, text, author):
         self.title = title 
         self.text = text
         self.author = author
@@ -24,9 +25,9 @@ class Model:
         self.slv.append (self.text)
         self.slv.append(self.author)
         self.list1[title] = self.slv
-        self.l = json.dump(list1._dict_)
-        return (self.l)
+        l.json= json.dump(list1._dict_)
+        return (l.json)
             
-s = Model()
-s.save1 (self.l)
+s = Model('заголовок', 'текст', 'автор')
+s.save1(self)
 print (s.save1)
