@@ -11,12 +11,11 @@ class Model:
         self.title = title 
         self.text = text
         self.author = author
-        d = self.__dict__
     
     def save1 (self):
+        d = self.__dict__
         with open ('l.json', 'w') as file:
             json.dump(d,file)
-        d = self.__dict__
             
 s = Model('заголовок', 'текст', 'автор')
 s.save1(self.__dict__)
