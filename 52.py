@@ -16,9 +16,7 @@ class Model:
     def save1 (self):
         with open ('l.json', 'w') as file:
             json.dump(d,file)
-
-        l.json= json.dump(d)
-        return (l.json)
+        d = self.__dict__
             
 s = Model('заголовок', 'текст', 'автор')
 s.save1(self.__dict__)
